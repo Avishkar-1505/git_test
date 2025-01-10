@@ -1,0 +1,82 @@
+//template c++ code for competitive programing
+
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+#include <map>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <set>
+#include <vector>
+#include <stack>
+#include <numeric>
+#include <queue>
+#include <fstream>
+using namespace std;
+#define int long long
+const long long MOD = 1e9+7;//998244353;
+const int N = 1e5 + 10 ;
+// mod = 43234324323 ;
+#define MIN_IN(A) *(std::min_element(A.begin(), A.end()))
+#define MAX_IN(A) *(std::max_element(A.begin(), A.end()))
+#define MAX_AT(A) (std::max_element(A.begin(), A.end()) - A.begin())
+#define MIN_AT(A) (std::min_element(A.begin(), A.end()) - A.begin())
+#define pb push_back
+#define SORT(A) std::sort(A.begin(), A.end())
+#define RSORT(A) std::sort(A.rbegin(), A.rend())
+#define REVERSE(A) std::reverse(A.begin(), A.end())
+#define VECIN(n,A) for(int i = 0; i < n; i++) { cin >> A[i]; }
+#define VECOUT(A) for(int i = 0; i < A.size(); i++) { cout << A[i] << " "; } cout << endl;
+#define COUT(A) cout<<A<<endl;
+ 
+#define ull unsigned long long
+#define D double
+#define UI unsigned int
+//  Hello World !
+int power(int x, int y) {
+    int res = 1;
+    x = x % MOD; 
+    while (y > 0) {  
+        if (y & 1) 
+            res = (res * x) % MOD;  
+        y = y >> 1;
+        x = (x * x) % MOD;   
+    } 
+    return res; 
+}
+ 
+int phi(int n) {
+	int ans = n;
+	for (int p = 2; p * p <= n; p++) {
+		if (n % p == 0) {
+			while (n % p == 0) { n /= p; }
+			ans -= ans / p;
+		}
+	}
+	if (n > 1) { ans -= ans / n; }
+	return ans;
+}
+
+//  int tsum  = accumulate(v.begin() , v.end() , 0LL);
+//  for a prime p , if raised to power q , # of no.s divisible by p if p^(q-1) that are >=1 && <= p^q;
+// N = 1e5+10;
+// 2 power i is 1<<i = power(2,i)
+// while creating numbers in certain limit try to add factors to the sorted ans in dec. not inc.
+
+void solve() {
+    //solve
+}
+
+signed main() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr); std::cout.tie(nullptr);
+    
+    int tt;
+    cin >> tt;
+    while(tt--){
+        solve();
+    }
+}
